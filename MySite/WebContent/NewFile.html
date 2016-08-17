@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<style type="text/css">
+.nav_bg li {
+float: left;
+display: inline;
+height: 26px;
+color: #fff;
+font-size: 14px;
+font-weight: 700;
+padding: 0 20px;
+margin: 0 5px;
+line-height: 26px;
+text-align: center;
+border: 1px transparent solid;
+border-radius: 5px;
+behavior: url(css/PIE.htc);
+position: relative;
+}
+.nav_bg li:hover, .nav_bg li.on {
+cursor: pointer;
+background: #fff;
+border-top: 1px #000 solid;
+border-left: 1px #000 solid;
+}
+</style>
+<script type="text/javascript">
+	function clickli(l){
+		var lis=document.getElementsByName("li");
+		for (var i = 0; i < lis.length; i++) {
+// 			lis[i].removeClass("on");
+			
+		}
+		lis[1].addClass("on");
+	}
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+ <div class="nav_bg ma_auto">
+<!--       <ul> -->
+<!--         <li onclick="clickli(this)" class="on"><a href="#">首页</a></li> -->
+<!--         <li onclick="clickli(this)"><a href="product.html"">在线服务</a></li> -->
+<!--         <li onclick="clickli(this)"><a href="product2.html">组织架构</a></li> -->
+<!--         <li onclick="clickli(this)"><a href="work_list_center.htm">工作简报</a></li> -->
+<!--         <li onclick="clickli(this)"><a href="zscq.htm">知识产权相关常识</a></li> -->
+<!--         <li onclick="clickli(this)"><a href="zlzs.htm">专利知识培训服务</a></li> -->
+<!--         <li onclick="clickli(this)"><a href="case.htm">案件审理公开</a></li> -->
+<!--       </ul> -->
+      <ul>
+        <li onclick="clickli(this)"><a href="#">首页</a></li>
+        <li onclick="clickli(this)"><a href="#">在线服务</a></li>
+        <li onclick="clickli(this)"><a href="#">组织架构</a></li>
+        <li onclick="clickli(this)"><a href="#">工作简报</a></li>
+        <li onclick="clickli(this)"><a href="zscq.htm">知识产权相关常识</a></li>
+        <li onclick="clickli(this)"><a href="zlzs.htm">专利知识培训服务</a></li>
+        <li onclick="clickli(this)"><a href="case.htm">案件审理公开</a></li>
+      </ul>
+    </div>
+</body>
+</html>
