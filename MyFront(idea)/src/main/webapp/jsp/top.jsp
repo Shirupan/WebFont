@@ -22,6 +22,9 @@
     .bs-docs-nav .navbar-toggle .icon-bar {
         background-color: #cf1232
     }
+    .navbar{
+        background-color: #66ccff;
+    }
 </style>
 <div class="container">
     <div class="navbar-header">
@@ -38,16 +41,24 @@
         <ul class="nav navbar-nav navbar-right">
             <li <%="home".equals(menu) ? " class=\"active\"" : ""%>><a
                     href="index.jsp"><span class="nav-chinese"><%=Constant.NAV_HOME%></span><br> </a></li>
-            <li <%="news".equals(menu) ? " class=\"active\"" : ""%>><a href="news.jsp"><span
-                    class="nav-chinese"><%=Constant.NAV_NEWS%></span></a></li>
-            <li <%="porducts".equals(menu) ? " class=\"active\"" : ""%>><a href="porducts.jsp"><span
-                    class="nav-chinese"><%=Constant.NAV_PORDUCTS%></span></a></li>
-            <li <%="company".equals(menu) ? " class=\"active\"" : ""%>><a href="company.jsp"><span
-                    class="nav-chinese"><%=Constant.NAV_COMPANY%></span></a></li>
-            <li <%="cooperation".equals(menu) ? " class=\"active\"" : ""%>><a href="cooperation.jsp"><span
-                    class="nav-chinese"><%=Constant.NAV_COOPERATION%></span></a></li>
-            <li <%="joinus".equals(menu) ? " class=\"active\"" : ""%>><a href="joinus.jsp"><span
-                    class="nav-chinese"><%=Constant.NAV_JOINUS%></span></a></li>
+            <li <%="note".equals(menu) ? " class=\"active\"" : ""%>><a
+                    href="note.jsp"><span class="nav-chinese"><%=Constant.NAV_NOTE%></span><br> </a></li>
+            <li <%="photo".equals(menu) ? " class=\"active\"" : ""%>><a
+                    href="photo.jsp"><span class="nav-chinese"><%=Constant.NAV_PHOTO%></span><br> </a></li>
+            <li <%="other".equals(menu) ? " class=\"active\"" : ""%>><a
+                    href="other.jsp"><span class="nav-chinese"><%=Constant.NAV_OTHER%></span><br> </a></li>
+            <li <%="aboutme".equals(menu) ? " class=\"active\"" : ""%>><a
+                    href="aboutme.jsp"><span class="nav-chinese"><%=Constant.NAV_ABOUTME%></span><br> </a></li>
+            <%--<li <%="news".equals(menu) ? " class=\"active\"" : ""%>><a href="../hidden/news.jsp"><span--%>
+                    <%--class="nav-chinese"><%=Constant.NAV_NEWS%></span></a></li>--%>
+            <%--<li <%="porducts".equals(menu) ? " class=\"active\"" : ""%>><a href="../hidden/porducts.jsp"><span--%>
+                    <%--class="nav-chinese"><%=Constant.NAV_PORDUCTS%></span></a></li>--%>
+            <%--<li <%="company".equals(menu) ? " class=\"active\"" : ""%>><a href="../hidden/company.jsp"><span--%>
+                    <%--class="nav-chinese"><%=Constant.NAV_COMPANY%></span></a></li>--%>
+            <%--<li <%="cooperation".equals(menu) ? " class=\"active\"" : ""%>><a href="../hidden/cooperation.jsp"><span--%>
+                    <%--class="nav-chinese"><%=Constant.NAV_COOPERATION%></span></a></li>--%>
+            <%--<li <%="joinus".equals(menu) ? " class=\"active\"" : ""%>><a href="../hidden/joinus.jsp"><span--%>
+                    <%--class="nav-chinese"><%=Constant.NAV_JOINUS%></span></a></li>--%>
         </ul>
     </nav>
 </div>

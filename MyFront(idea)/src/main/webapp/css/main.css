@@ -1,3 +1,33 @@
-.navbar{
-    background-color: #66ccff;
+.banner{
+    text-align: center;
+    position: relative;
+    padding: 40px 0;
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0,.4),0 0 30px rgba(0,0,0,.075);
+    background: #640ac5;
+    background: -moz-linear-gradient(45deg, #640ac5 0, #d6226b 100%);
+    background: -webkit-gradient(linear,left bottom,right top,color-stop(0%,#020031),color-stop(100%,#6d3353));
+    background: -webkit-linear-gradient(45deg,#020031 0,#6d3353 100%);
+    background: -o-linear-gradient(45deg,#020031 0,#6d3353 100%);
+    background: -ms-linear-gradient(45deg,#020031 0,#6d3353 100%);
+    background: linear-gradient(45deg, #640ac5 0, #d6226b 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#640ac5', endColorstr='#d6226b', GradientType=1);
+    -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+    -moz-box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+    box-shadow: inset 0 3px 7px rgba(0,0,0,.2),inset 0 -3px 7px rgba(0,0,0,.2);
+}
+.banner-info {
+    padding-bottom: 15px;
+    text-align: center;
+}
+.banner-info ul{
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.banner-info ul li {
+    display: inline-block;
+    line-height: 1;
+    padding: 0 10px 0 10px;
 }

@@ -1,16 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%>
-<meta name="description" content="">
-<meta name="keywords" content="Bootstrap,石儒潘，石儒潘的个人网站">
-<meta name="author" content="Shirp">
+		 pageEncoding="utf-8"%>
 <%@page import="com.sl.utils.Constant" %>
 <%
-	request.setAttribute("MENU_INDEX", "home");
+	request.setAttribute("MENU_INDEX", "aboutme");
 %>
 <!DOCTYPE html>
 <html>
 <head>
-	<title><%=Constant.TITLE_HOME%></title>
+	<title><%=Constant.TITLE_ABOUTME%></title>
 	<link href="<%=request.getContextPath()%>/css/bootstrap-3.2.0.min.css" rel="stylesheet">
 	<link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet">
 </head>
