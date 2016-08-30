@@ -22,9 +22,6 @@
     .bs-docs-nav .navbar-toggle .icon-bar {
         background-color: #cf1232
     }
-    .navbar{
-        background-color: #66ccff;
-    }
 </style>
 <div class="container">
     <div class="navbar-header">
