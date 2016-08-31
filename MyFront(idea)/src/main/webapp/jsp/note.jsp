@@ -28,14 +28,14 @@
     <jsp:include page="top.jsp"></jsp:include>
     <div class="jumbotron banner">
         <div class="container">
-            <h1>Home</h1>
+            <h1>Note</h1>
             <h2>这里有简洁、直观、强悍的笔记。</h2>
         </div>
     </div>
     <jsp:include page="banner-info.jsp"></jsp:include>
 </header>
 
-<div class="container">
+<div class="container main-content">
     <div id="sort" class="col-md-2 col-sm-2 col-xs-2 sort content-bd">
         <ul class="nav">
             <li><a href="#">Android</a></li>

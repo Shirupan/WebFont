@@ -10,7 +10,7 @@
                 <span>电话：12345678901</span>
             </li>
             <li>
-                <span>邮箱：srp02025832160@163.com</span>
+                <span>邮箱：<a href="mailto:srp02025832160@163.com">srp02025832160@163.com</a></span>
             </li>
         </ul>
     </div>
