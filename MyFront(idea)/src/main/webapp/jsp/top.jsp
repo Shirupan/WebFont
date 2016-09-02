@@ -4,16 +4,32 @@
     String menu = (String) request.getAttribute("MENU_INDEX");
 %>
 <style type="text/css">
+    .logo{
+        color: #ffffff;
+
+    }
+    .logo:hover{
+        color: #ffffff;
+        text-decoration: none;
+    }
+    .logo>span{
+        font-size: 80px;
+    }
     a {
         color: #777777;
     }
-    .active a{
+    #bs-navbar>ul > li > a{
+        font-size: 18px;
+        padding: 47px 20px;
+        margin: 0px 1px;
+    }
+    .active>a{
         color: #ffffff;
         background-color: #cf1232;
     }
-    .nav > li > a:hover{
+    #bs-navbar>ul > li > a:hover{
         color: #ffffff;
-        background-color: #66ccff;
+        background-color: #cf1232;
         /*border-bottom: #cf1232 4px solid;*/
     }
     .bs-docs-nav .navbar-header .navbar-toggle {
@@ -25,6 +41,7 @@
 </style>
 <div class="container">
     <div class="navbar-header">
+        <a class="logo" href="#"><span>Shirp</span></a>
         <button class="navbar-toggle collapsed" type="button"
                 data-toggle="collapse" data-target="#bs-navbar"
                 aria-controls="bs-navbar" aria-expanded="false">
