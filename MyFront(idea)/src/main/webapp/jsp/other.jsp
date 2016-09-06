@@ -8,16 +8,16 @@
 <html>
 <head>
 	<title><%=Constant.TITLE_OTHER%></title>
-	<link href="<%=request.getContextPath()%>/css/bootstrap-3.2.0.min.css" rel="stylesheet">
-	<link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet">
-	<link href="<%=request.getContextPath()%>/css/color.css" rel="stylesheet">
+	<link href="/css/bootstrap-3.2.0.min.css" rel="stylesheet">
+	<link href="/css/main.css" rel="stylesheet">
+	<link href="/css/color.css" rel="stylesheet">
 </head>
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav color-main-bg">
-		<jsp:include page="top.jsp"></jsp:include>
+		<jsp:include page="/include/top.jsp"></jsp:include>
 	</header>
-	<jsp:include page="bottom.jsp"></jsp:include>
+	<jsp:include page="/include/bottom.jsp"></jsp:include>
 </body>
-<script src="<%=request.getContextPath()%>/js/jquery-2.1.1.min.js"></script>
-<script src="<%=request.getContextPath()%>/js/bootstrap-3.2.0.min.js"></script>
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/bootstrap-3.2.0.min.js"></script>
 </html>

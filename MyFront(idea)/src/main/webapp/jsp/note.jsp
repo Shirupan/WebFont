@@ -9,9 +9,9 @@
 <head>
     <title><%=Constant.TITLE_NOTE%>
     </title>
-    <link href="<%=request.getContextPath()%>/css/bootstrap-3.2.0.min.css" rel="stylesheet">
-    <link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet">
-    <link href="<%=request.getContextPath()%>/css/color.css" rel="stylesheet">
+    <link href="/css/bootstrap-3.2.0.min.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/color.css" rel="stylesheet">
     <style>
         .sort {
             padding-right: 5px;
@@ -25,14 +25,14 @@
 </head>
 <body class="bs-docs-home">
 <header class="navbar navbar-static-top bs-docs-nav color-main-bg">
-    <jsp:include page="top.jsp"></jsp:include>
+    <jsp:include page="/include/top.jsp"></jsp:include>
     <div class="jumbotron banner">
         <div class="container">
             <h1>Note</h1>
             <h2>这里有简洁、直观、强悍的笔记。</h2>
         </div>
     </div>
-    <jsp:include page="banner-info.jsp"></jsp:include>
+    <jsp:include page="/include/banner-info.jsp"></jsp:include>
 </header>
 
 <div class="container main-content">
@@ -75,8 +75,8 @@
         </div>
     </div>
 </div>
-<jsp:include page="bottom.jsp"></jsp:include>
+<jsp:include page="/include/bottom.jsp"></jsp:include>
 </body>
-<script src="<%=request.getContextPath()%>/js/jquery-2.1.1.min.js"></script>
-<script src="<%=request.getContextPath()%>/js/bootstrap-3.2.0.min.js"></script>
+<script src="/js/jquery-2.1.1.min.js"></script>
+<script src="/js/bootstrap-3.2.0.min.js"></script>
 </html>

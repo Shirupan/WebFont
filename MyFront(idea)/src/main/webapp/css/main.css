@@ -1,8 +1,11 @@
+body{
+    font-family: "Microsoft YaHei UI";
+}
 .banner{
     /*待改进*/
     text-align: center;
     position: relative;
-    padding: 40px 0;
+    padding: 15% 0;
     color: #fff;
     text-shadow: 0 1px 3px rgba(0,0,0,.4),0 0 30px rgba(0,0,0,.075);
     background: #020031;
@@ -40,4 +43,36 @@
 }
 .main-content{
     min-height: 600px;
+}
+.unit{
+    margin-top: 3%;
+}
+.unit-title{
+    text-align: center;
+}
+.unit-title span{
+    font-size: 26px;
+}
+.news{
+    /*padding: 0px;*/
+}
+.news>div{
+    padding: 0px;
+}
+.news-title{
+    /*padding: 0px;*/
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+.news-time{
+    text-align: right;
+}
+.news-more{
+    font-size: 20px;
+    text-align: right;
+    /*margin: 5px 0;*/
+    padding-right: 15px;
+}
+.news-more a:hover{
+    text-decoration: none;
 }

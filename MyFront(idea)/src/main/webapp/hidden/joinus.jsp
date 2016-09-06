@@ -14,7 +14,7 @@
 <body class="bs-docs-home">
 	<header class="navbar navbar-static-top bs-docs-nav" id="top"
 		role="banner">
-		<jsp:include page="../jsp/top.jsp"></jsp:include>
+		<jsp:include page="../include/top.jsp"></jsp:include>
 	</header>
 </body>
 <script src="<%=request.getContextPath()%>/js/jquery-2.1.1.min.js"></script>
