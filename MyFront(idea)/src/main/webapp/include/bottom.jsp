@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
          pageEncoding="utf-8" %>
+<%@ page import="com.sl.utils.TimeUtils" %>
 <style>
     .bottom{
         margin-top: 10px;
@@ -13,7 +14,7 @@
 <div class="bottom color-main-bg">
     <div class="container">
         <span class="copyright">
-            Copyright © 2016 Shirp. All Rights Reserved
+            Copyright © 2016-<%=TimeUtils.getCurTimeYear()%> Shirp. All Rights Reserved
         </span>
         <span class="copyright">
             备案号：123456789456123
