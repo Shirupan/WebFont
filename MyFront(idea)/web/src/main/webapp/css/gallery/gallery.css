@@ -1,0 +1,85 @@
+/*--gallery-starts--*/
+.gallery {
+    /*padding-top: 20px;*/
+}
+
+.gallery-top {
+    text-align: center;
+}
+
+.gallery-bottom {
+    /*margin-top: 3%;*/
+}
+
+.da-thumbs {
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.da-thumbs li {
+    float: left;
+    margin: 0.4%;
+    background: #EFEFEF;
+    padding: 8px;
+    position: relative;
+    box-shadow: 0 1px 3px rgba(231, 231, 231, 0.43);
+    width: 49.2%;
+}
+
+@media ( min-width: 768px) {
+    .da-thumbs li {
+        width: 49.2%;
+    }
+}
+
+@media ( min-width: 992px) {
+    .da-thumbs li {
+        width: 24.2%;
+    }
+}
+
+.da-thumbs li a, .da-thumbs li a img {
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+}
+
+.da-thumbs li a {
+    overflow: hidden;
+}
+
+.da-thumbs li a div {
+    position: absolute;
+    background: rgba(31, 39, 42, 0.9);
+    width: 100%;
+    height: 100%;
+}
+
+.da-thumbs li a div span {
+    display: block;
+    padding: 10px 0;
+    margin: 5px 20px 20px 20px;
+    font-weight: normal;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Roboto-Regular';
+}
+
+.da-thumbs li a div h5 {
+    color: #FFF;
+    font-size: 21px;
+    margin: 28px 0 0 0;
+    font-family: 'AbrilFatface-Regular';
+    text-align: center;
+}
+
+/*--//gallery-end--*/
