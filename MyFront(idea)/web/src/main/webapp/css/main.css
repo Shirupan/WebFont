@@ -1,5 +1,7 @@
 body{
     font-family: "Microsoft YaHei UI";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 .banner{
     /*待改进*/

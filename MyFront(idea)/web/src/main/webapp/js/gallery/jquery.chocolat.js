@@ -24,10 +24,10 @@
 			vache                 : true,					
 			separator1            : ' | ',						
 			separator2            : '/',						
-			leftImg               : 'images/left.gif',	
-			rightImg              : 'images/right.gif',	
-			closeImg              : 'images/close.gif',		
-			loadingImg            : 'images/loading.gif',
+			leftImg               : '../img/gallery/left.gif',
+			rightImg              : '../img/gallery/right.gif',
+			closeImg              : '../img/gallery/close.gif',
+			loadingImg            : '../img/gallery/loading.gif',
 			currentImage          : 0,						
 			setIndex              : 0,
 			setTitle              : '',
@@ -87,7 +87,7 @@
 		function _interface(){
 			//html
 			clear();
-			settings.container.append('<div id="Choco_overlay"></div><div id="Choco_content"><div id="Choco_close"></div><div id="Choco_loading"></div><div id="Choco_container_photo"><img id="Choco_bigImage" src="" /></div><div id="Choco_container_description"><span id="Choco_container_title"></span><span id="Choco_container_via"></span></div><div id="Choco_left_arrow" class="Choco_arrows"></div><div id="Choco_right_arrow" class="Choco_arrows"></div></div>');	
+			settings.container.append('<div id="Choco_overlay"></div><div id="Choco_content"><div id="Choco_close"><img src="../../img/gallery/close.png" style="float: right"></div><div id="Choco_loading"></div><div id="Choco_container_photo"><img id="Choco_bigImage" src="" /></div><div id="Choco_container_description"><span id="Choco_container_title"></span><span id="Choco_container_via"></span></div><div id="Choco_left_arrow" class="Choco_arrows"></div><div id="Choco_right_arrow" class="Choco_arrows"></div></div>');
 			$('#Choco_left_arrow').css('background-image', 'url('+settings.leftImg+')');  
 			$('#Choco_right_arrow').css('background-image', 'url('+settings.rightImg+')');  
 			$('#Choco_close').css('background-image', 'url('+settings.closeImg+')'); 
@@ -232,8 +232,9 @@
 		function upadteDescription(){
 			var current = settings.currentImage + 1;
 			var last = settings.lastImage + 1;
-			$('#Choco_container_title').html(images[settings.setIndex][settings.currentImage]['caption']);
+			// $('#Choco_container_title').html(images[settings.setIndex][settings.currentImage]['caption']);
 			$('#Choco_container_via').html(settings.setTitle+settings.separator1+current +settings.separator2+last);
+			// $('#Choco_container_title').html(settings.setTitle+settings.separator1+current +settings.separator2+last);
 		}
 		function isSet(variable,defaultValue){
 			// return variable === undefined ? defaultValue : variable; ?
