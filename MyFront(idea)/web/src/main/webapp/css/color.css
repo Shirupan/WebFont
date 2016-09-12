@@ -13,11 +13,12 @@ body{
     color: #cf1232;
 }
 .news-bg{
-    border:#66ccff 4px solid;
+    border:#66ccff 2px solid;
+    background-color: #ffffff;
 }
 .news-title-color{
     color: #cf1232;
-    background-color: #66ccff;
+    /*background-color: #66ccff;*/
 }
 .news-more-color{
     color: #000000;

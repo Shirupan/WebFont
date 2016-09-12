@@ -29,7 +29,7 @@
       <module name="Common" target="1.5" />
       <module name="JavaCommon" target="1.5" />
       <module name="MyFront" target="1.5" />
-      <module name="web" target="1.5" />
+      <module name="web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

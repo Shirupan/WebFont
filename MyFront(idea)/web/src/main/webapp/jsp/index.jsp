@@ -9,6 +9,11 @@
 <%
     request.setAttribute("MENU_INDEX", "home");
 %>
+<style>
+    .da-thumbs li {
+        width: 32.5%!important;
+    }
+</style>
 <!DOCTYPE html>
 <html>
 <head>
@@ -128,82 +133,40 @@
 
     <!--gallery:start-->
     <div class="col-md-12 unit">
-        <div class="gallery" id="gallery">
             <%--<div class="unit-title">--%>
             <%--<span>SHOW TIME</span>--%>
             <%--</div>--%>
             <div class="gallery-bottom">
                 <section>
                     <ul id="da-thumbs" class="da-thumbs">
-                        <li><a href="<%=request.getContextPath()%>/images/g-1.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-1.jpg" alt=""/>
+                        <li><a href="<%=request.getContextPath()%>/BattleCity/index.html"> <img
+                                src="<%=request.getContextPath()%>/BattleCity/images/menu.gif" alt=""/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>坦克大战</h5>
+                                <%--<span>non suscipit leo fringilla non suscipit leo--%>
+									<%--fringilla molestie</span>--%>
                             </div>
                         </a></li>
-                        <li><a href="<%=request.getContextPath()%>/images/g-2.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-2.jpg" alt=""/>
+                        <li><a href="<%=request.getContextPath()%>/palyball/start.html"> <img
+                                src="<%=request.getContextPath()%>/palyball/image/ball.png" alt=""/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>投篮</h5>
+                                <%--<span>non suscipit leo fringilla non suscipit leo--%>
+									<%--fringilla molestie</span>--%>
                             </div>
                         </a></li>
-                        <li><a href="<%=request.getContextPath()%>/images/g-3.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-3.jpg" alt=""/>
+                        <li><a href="<%=request.getContextPath()%>/zhaocha/index.html" rel="show"> <img
+                                src="<%=request.getContextPath()%>/zhaocha/img/2.png" alt=""/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
-                            </div>
-                        </a></li>
-                        <li><a href="<%=request.getContextPath()%>/images/g-4.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-4.jpg" alt=""/>
-                            <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
-                            </div>
-                        </a></li>
-                        <li><a href="<%=request.getContextPath()%>/images/g-5.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-5.jpg" alt=""/>
-                            <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
-                            </div>
-                        </a></li>
-                        <li><a href="<%=request.getContextPath()%>/images/g-6.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-6.jpg" alt=""/>
-                            <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
-                            </div>
-                        </a></li>
-                        <li><a href="<%=request.getContextPath()%>/images/g-7.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-7.jpg" alt=""/>
-                            <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
-                            </div>
-                        </a></li>
-                        <li><a href="<%=request.getContextPath()%>/images/g-8.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-8.jpg" alt=""/>
-                            <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>找茬</h5>
+                                <%--<span>non suscipit leo fringilla non suscipit leo--%>
+									<%--fringilla molestie</span>--%>
                             </div>
                         </a></li>
                         <div class="clearfix"></div>
                     </ul>
                 </section>
             </div>
-        </div>
     </div>
     <!--gallery-end-->
 
@@ -216,7 +179,7 @@
 <%--garlly:start--%>
 <script src="<%=request.getContextPath()%>/js/gallery/modernizr.custom.97074.js"></script>
 <script src="<%=request.getContextPath()%>/js/gallery/jquery.chocolat.js"></script>
-<script src="<%=request.getContextPath()%>/js/gallery/jquery.hoverdir.js"></script>
+<script src="<%=request.getContextPath()%>/js/gallery/jquery.hoverdir.bottomtotop.js"></script>
 <script type="text/javascript">
     $(function () {
         $(' #da-thumbs > li ').each(function () {
