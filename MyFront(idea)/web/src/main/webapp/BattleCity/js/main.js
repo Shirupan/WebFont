@@ -55,6 +55,7 @@ function initScreen(){
 	$("#overCanvas").attr({"height":SCREEN_HEIGHT});
 	$("#canvasDiv").css({"width":SCREEN_WIDTH});
 	$("#canvasDiv").css({"height":SCREEN_HEIGHT});
+	$("#canvasDiv").css({"margin":"auto"});
 	$("#canvasDiv").css({"background-color":"#000000"});
 	
 }
@@ -119,7 +120,7 @@ function gameLoop(){
 $(document).keydown(function(e){
 	switch(gameState){
 	case GAME_STATE_MENU:
-		if(e.keyCode == keyboard.ENTER){
+		if(e.keyCode == keyboard.J){
 			gameState = GAME_STATE_INIT;
 			//只有一个玩家
 			if(menu.playNum == 1){
@@ -127,9 +128,9 @@ $(document).keydown(function(e){
 			}
 		}else{
 			var n = 0;
-			if(e.keyCode == keyboard.DOWN){
+			if(e.keyCode == keyboard.W){
 				n = 1;
-			}else if(e.keyCode == keyboard.UP){
+			}else if(e.keyCode == keyboard.S){
 				n = -1;
 			}
 			menu.next(n);
@@ -140,14 +141,14 @@ $(document).keydown(function(e){
 			keys.push(e.keyCode);
 		}
 		//射击
-		if(e.keyCode == keyboard.SPACE && player1.lives > 0){
+		if(e.keyCode == keyboard.J && player1.lives > 0){
 			player1.shoot(BULLET_TYPE_PLAYER);
-		}else if(e.keyCode == keyboard.ENTER && player2.lives > 0){
+		}else if(e.keyCode == keyboard.Num0 && player2.lives > 0){
 			player2.shoot(BULLET_TYPE_ENEMY);
 		}else if(e.keyCode == keyboard.N){
-			nextLevel();
+			// nextLevel();
 		}else if(e.keyCode == keyboard.P){
-			preLevel();
+			// preLevel();
 		}
 		break;
 	}

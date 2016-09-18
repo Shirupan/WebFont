@@ -15,16 +15,16 @@ var Keyboard = function(){
 	this.CTRL = 17;
 	this.ALT = 18;
 
-	this.Num0 = 48;
-	this.Num1 = 49;
-	this.Num2 = 50;
-	this.Num3 = 51;
-	this.Num4 = 52;
-	this.Num5 = 53;
-	this.Num6 = 54;
-	this.Num7 = 55;
-	this.Num8 = 56;
-	this.Num9 = 57;
+	this.Num0 = 96;
+	this.Num1 = this.Num0+1;
+	this.Num2 = this.Num0+2;
+	this.Num3 = this.Num0+3;
+	this.Num4 = this.Num0+4;
+	this.Num5 = this.Num0+5;
+	this.Num6 = this.Num0+6;
+	this.Num7 = this.Num0+7;
+	this.Num8 = this.Num0+8;
+	this.Num9 = this.Num0+9;
 	
 	this.A = 65;
 	this.B = 66;
