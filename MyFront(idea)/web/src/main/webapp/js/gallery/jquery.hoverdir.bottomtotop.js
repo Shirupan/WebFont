@@ -112,7 +112,7 @@
 			
 			var slideFromTop = { left : '0px', top : '-100%' },
 				slideFromBottom = { left : '0px', top : '100%' },
-				slideTop = { top : '0px' };
+				slideTop = { top : '85%' };
 
 			return { from : slideFromBottom, to : slideTop };
 					
