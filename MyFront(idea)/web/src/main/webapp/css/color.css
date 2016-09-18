@@ -4,7 +4,12 @@ body{
 .color-main-bg{
     background-color: #66ccff;
 }
-
+.main-blue{
+    color: #66ccff;
+}
+.main-red{
+    color: #cf1232;
+}
 .content-bd{
     border: #66ccff 4px solid;
 }
@@ -22,4 +27,10 @@ body{
 }
 .news-more-color{
     color: #000000;
+}
+.content{
+    background-color: #ffffff;
+}
+.mailto{
+    color: #2a6496;
 }

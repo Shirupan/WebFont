@@ -3,6 +3,9 @@ body{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+a{
+    color: #66ccff;
+}
 .banner{
     /*待改进*/
     text-align: center;
@@ -55,6 +58,9 @@ body{
 .unit-title span{
     font-size: 26px;
 }
+.tips{
+    font-size: 24px;
+}
 .news{
     /*padding: 0px;*/
 }
@@ -77,4 +83,8 @@ body{
 }
 .news-more a:hover{
     text-decoration: none;
+}
+.content{
+    font-size: 18px;
+    line-height: 1.5;
 }

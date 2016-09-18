@@ -7,10 +7,10 @@
                 <span>QQ：429379083</span>
             </li>
             <li>
-                <span>电话：12345678901</span>
+                <span>电话：01234567890</span>
             </li>
             <li>
-                <span>邮箱：<a href="mailto:srp02025832160@163.com">srp02025832160@163.com</a></span>
+                <span>邮箱：<a class="mailto" href="mailto:srp02025832160@163.com">srp02025832160@163.com</a></span>
             </li>
         </ul>
     </div>
