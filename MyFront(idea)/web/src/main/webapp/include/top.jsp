@@ -20,8 +20,14 @@
     }
     #bs-navbar>ul > li > a{
         font-size: 18px;
-        padding: 47px 20px;
+        padding: 10px 0px;
         margin: 0px 1px;
+        text-align: center;
+    }
+    @media ( min-width: 768px){
+        #bs-navbar>ul > li > a{
+            padding: 47px 20px;
+        }
     }
     .active>a{
         color: #ffffff;
@@ -37,6 +43,9 @@
     }
     .bs-docs-nav .navbar-toggle .icon-bar {
         background-color: #cf1232
+    }
+    .navbar-toggle {
+        margin-top: 50px!important;
     }
 </style>
 <div class="container">
