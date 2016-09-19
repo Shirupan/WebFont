@@ -8,6 +8,7 @@
 <html>
 <head>
 	<title><%=Constant.TITLE_OTHER%></title>
+	<link rel="icon" href="<%=request.getContextPath()%>/img/icon64.ico">
 	<link href="<%=request.getContextPath()%>/css/bootstrap-3.2.0.min.css" rel="stylesheet">
 	<link href="<%=request.getContextPath()%>/css/main.css" rel="stylesheet">
 	<link href="<%=request.getContextPath()%>/css/color.css" rel="stylesheet">
