@@ -17,6 +17,13 @@
 <body class="bs-docs-home">
 <header class="navbar navbar-static-top bs-docs-nav color-main-bg">
     <jsp:include page="/include/top.jsp"></jsp:include>
+    <div class="jumbotron banner">
+        <div class="container">
+            <h1>Aboutme</h1>
+            <h2>关于本人的经历。</h2>
+        </div>
+    </div>
+    <jsp:include page="/include/banner-info.jsp"></jsp:include>
 </header>
 <div class="container main-content content">
     <p>
@@ -42,6 +49,7 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6、短信网关系统，根据业务需要到北京总部出差两个月修改已有短信网关系统，主要是数据库连接和线程池维护。
         </br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在开发中本人掌握了：Android、Java、Jsp、ibatis、Html、Ajax、Bootstrap、Maven、Tomcat、Mysql等技术，以及Eclipse、Android Studio、IntelliJ IDEA等开发工具。
+
     </p>
     <%--<p>--%>
     <%--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真认真。&ndash;%&gt;--%>

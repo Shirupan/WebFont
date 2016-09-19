@@ -41,7 +41,7 @@
 </style>
 <div class="container">
     <div class="navbar-header">
-        <a class="logo" href="#"><span>Shirp</span></a>
+        <a class="logo" href="#"><img src="<%=request.getContextPath()%>/img/logo.png"></a>
         <button class="navbar-toggle collapsed" type="button"
                 data-toggle="collapse" data-target="#bs-navbar"
                 aria-controls="bs-navbar" aria-expanded="false">
