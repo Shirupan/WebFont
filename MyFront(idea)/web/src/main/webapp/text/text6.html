@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>排序</title>
+</head>
+<body>
+<p style="text-align: center;font-size: 25px">排序</p>
+<p style="margin-left: 240px;"><span style="font-size:18px">插入排序</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">插入排序是这样实现的：</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">1、首先新建一个空列表，用于保存已排序的有序数列（我们称之为&quot;有序列表&quot;）。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">2、从原数列中取出一个数，将其插入&quot;有序列表&quot;中，使其仍旧保持有序状态。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">3、重复2号步骤，直至原数列为空。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">插入排序的平均时间复杂度为平方级的，效率不高，但是容易实现。它借助了&quot;逐步扩大成果&quot;的思想，使有序列表的长度逐渐增加，直至其长度等于原列表的长度。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">插入排序的基本思想是在遍历数组的过程中，假设在序号 i 之前的元素即 [0..i-1] 都已经排好序，本趟需要找到 i 对应的元素 x 的正确位置 k ，并且在寻找这个位置 k 的过程中逐个将比较过的元素往后移一位，为元素 x &ldquo;腾位置&rdquo;，最后将 k 对应的元素值赋为 x ，一般情况下，插入排序的时间复杂度和空间复杂度分别为 O(n2 ) 和 O(1)。[1]&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:18px">冒泡排序</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">冒泡排序是这样实现的：</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">1、从列表的第一个数字到倒数第二个数字，逐个检查：若某一位上的数字大于他的下一位，则将它与它的下一位交换。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">2、重复1号步骤，直至再也不能交换。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">冒泡排序的平均时间复杂度与插入排序相同，也是平方级的，但冒泡排序是原地排序的，也就是说它不需要额外的存储空间。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:18px">选择排序</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">选择排序是这样实现的：</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">1、设数组内存放了n个待排数字，数组下标从1开始，到n结束。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">2、初始化i=1</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">3、从数组的第i个元素开始到第n个元素，寻找最小的元素。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">4、将上一步找到的最小元素和第i位元素交换。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">5、i++,直到i=n－1算法结束，否则回到第3步</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">选择排序的平均时间复杂度也是O(n^2)的。</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">举例：</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">564</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">比如说这个，我想让它从小到大排序，怎么做呢？</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">第一步：从第一位开始找最小的元素，564中4最小，与第一位交换。结果为465</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">第二步：从第二位开始找最小的元素，465中5最小，与第二位交换。结果为456</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">第三步：i=2，n=3，此时i=n-1，算法结束</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">完成</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:18px">快速排序</span></p>
+
+<p style="margin-left: 280px;"><span style="font-size:16px">现在开始，我们要接触高效排序算法了。实践证明，快速排序是所有排序算法中最高效的一种。它采用了分治的思想：先保证列表的前半部分都小于后半部分，然后分别对前半部分和后半部分排序，这样整个列表就有序了。这是一种先进的思想，也是它高效的原因。因为在排序算法中，算法的高效与否与列表中数字间的比较次数有直接的关系，而&quot;保证列表的前半部分都小于后半部分&quot;就使得前半部分的任何一个数从此以后都不再跟后半部分的数进行比较了，大大减少了数字间不必要的比较。但查找数据得另当别论了。</span></p>
+</body>
+</html>

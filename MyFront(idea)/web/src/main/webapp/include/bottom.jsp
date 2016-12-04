@@ -10,6 +10,9 @@
     .copyright{
         display:block;
     }
+    .bottom-a{
+        color: #000000;
+    }
 </style>
 <div class="bottom color-main-bg">
     <div class="container">
@@ -17,7 +20,7 @@
             Copyright © 2016-<%=TimeUtils.getCurTimeYear()%> Shirp. All Rights Reserved
         </span>
         <span class="copyright">
-            备案号：123456789456123
+            <a href="http://www.beianbeian.com/" target="_blank" class="bottom-a">备案号：粤ICP备16111830号-1</a>
         </span>
     </div>
     <jsp:include page="banner-info.jsp"></jsp:include>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>js正则表达式</title>
+</head>
+<body>
+<p style="text-align: center;font-size: 25px">js正则表达式</p>
+<p style="margin-left: 240px;"><span style="font-size:16px">1 . 校验密码强度</span></p>
+<p style="margin-left: 240px;"><span style="font-size:16px">密码的强度必须是包含大小写字母和数字的组合，不能使用特殊字符，长度在8-10之间。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,10}$<br />
+2. 校验中文</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">字符串仅能是中文。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^[\\u4e00-\\u9fa5]{0,}$<br />
+3. 由数字、26个英文字母或下划线组成的字符串</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^\\w+$<br />
+4. 校验E-Mail 地址</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">同密码一样，下面是E-mail地址合规性的正则检查语句。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">[\\w!#$%&amp;&#39;*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&amp;&#39;*+/=?^_`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?<br />
+5. 校验身份证号码</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">下面是身份证号码的正则校验。15 或 18位。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">15位：</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^[1-9]\\d{7}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}$<br />
+18位：</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^[1-9]\\d{5}[1-9]\\d{3}((0\\d)|(1[0-2]))(([0|1|2]\\d)|3[0-1])\\d{3}([0-9]|X)$<br />
+6. 校验日期</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">&ldquo;yyyy-mm-dd&ldquo; 格式的日期校验，已考虑平闰年。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^(?:(?!0000)[0-9]{4}-(?:(?:0[1-9]|1[0-2])-(?:0[1-9]|1[0-9]|2[0-8])|(?:0[13-9]|1[0-2])-(?:29|30)|(?:0[13578]|1[02])-31)|(?:[0-9]{2}(?:0[48]|[2468][048]|[13579][26])|(?:0[48]|[2468][048]|[13579][26])00)-02-29)$<br />
+7. 校验金额</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">金额校验，精确到2位小数。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^[0-9]+(.[0-9]{2})?$<br />
+8. 校验手机号</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">下面是国内 13、15、18开头的手机号正则表达式。（可根据目前国内收集号扩展前两位开头号码）</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\\d{8}$<br />
+9. 判断IE的版本</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">IE目前还没被完全取代，很多页面还是需要做版本兼容，下面是IE版本检查的表达式。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^.*MSIE [5-8](?:\\.[0-9]+)?(?!.*Trident\\/[5-9]\\.0).*$<br />
+10. 校验IP-v4地址</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">IP4 正则语句。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">\\b(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\b<br />
+11. 校验IP-v6地址</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">IP6 正则语句。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">(([0-9a-fA-F]{1,4}:){7,7}[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,7}:|([0-9a-fA-F]{1,4}:){1,6}:[0-9a-fA-F]{1,4}|([0-9a-fA-F]{1,4}:){1,5}(:[0-9a-fA-F]{1,4}){1,2}|([0-9a-fA-F]{1,4}:){1,4}(:[0-9a-fA-F]{1,4}){1,3}|([0-9a-fA-F]{1,4}:){1,3}(:[0-9a-fA-F]{1,4}){1,4}|([0-9a-fA-F]{1,4}:){1,2}(:[0-9a-fA-F]{1,4}){1,5}|[0-9a-fA-F]{1,4}:((:[0-9a-fA-F]{1,4}){1,6})|:((:[0-9a-fA-F]{1,4}){1,7}|:)|fe80:(:[0-9a-fA-F]{0,4}){0,4}%[0-9a-zA-Z]{1,}|::(ffff(:0{1,4}){0,1}:){0,1}((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])|([0-9a-fA-F]{1,4}:){1,4}:((25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9])\\.){3,3}(25[0-5]|(2[0-4]|1{0,1}[0-9]){0,1}[0-9]))<br />
+12. 检查URL的前缀</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">应用开发中很多时候需要区分请求是HTTPS还是HTTP，通过下面的表达式可以取出一个url的前缀然后再逻辑判断。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">if (!s.match(/^[a-zA-Z]+:\\/\\//))<br />
+{<br />
+&nbsp; &nbsp; s = &#39;http://&#39; + s;<br />
+}<br />
+13. 提取URL链接</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">下面的这个表达式可以筛选出一段文本中的URL。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^(f|ht){1}(tp|tps):\\/\\/([\\w-]+\\.)+[\\w-]+(\\/[\\w- ./?%&amp;=]*)?<br />
+14. 文件路径及扩展名校验</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">验证windows下文件路径和扩展名（下面的例子中为.txt文件）</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^([a-zA-Z]\\:|\\\\)\\\\([^\\\\]+\\\\)*[^\\/:*?&quot;&lt;&gt;|]+\\.txt(l)?$<br />
+15. 提取Color Hex Codes</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">有时需要抽取网页中的颜色代码，可以使用下面的表达式。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})$<br />
+16. 提取网页图片</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">假若你想提取网页中所有图片信息，可以利用下面的表达式。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">\\&lt; *[img][^\\&gt;]*[src] *= *[\\&quot;\\&#39;]{0,1}([^\\&quot;\\&#39;\\ &gt;]*)<br />
+17. 提取页面超链接</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">提取html中的超链接。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">(&lt;a\\s*(?!.*\\brel=)[^&gt;]*)(href=&quot;https?:\\/\\/)((?!(?:(?:www\\.)?&#39;.implode(&#39;|(?:www\\.)?&#39;, $follow_list).&#39;))[^&quot;]+)&quot;((?!.*\\brel=)[^&gt;]*)(?:[^&gt;]*)&gt;<br />
+18. 查找CSS属性</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">通过下面的表达式，可以搜索到相匹配的CSS属性。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">^\\s*[a-zA-Z\\-]+\\s*[:]{1}\\s[a-zA-Z0-9\\s.#]+[;]{1}<br />
+19. 抽取注释</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">如果你需要移除HMTL中的注释，可以使用如下的表达式。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">&lt;!--(.*?)--&gt;<br />
+20. 匹配HTML标签</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">通过下面的表达式可以匹配出HTML中的标签属性。</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">&lt;\\/?\\w+((\\s+\\w+(\\s*=\\s*(?:&quot;.*?&quot;|&#39;.*?&#39;|[\\^&#39;&quot;&gt;\\s]+))?)+\\s*|\\s*)\\/?&gt;</span></p>
+</body>
+</html>

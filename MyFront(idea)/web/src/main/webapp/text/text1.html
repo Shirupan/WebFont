@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery35个小技巧</title>
+</head>
+<body>
+<p style="text-align: center;font-size: 25px">jquery35个小技巧</p>
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">1. 禁止右键点击<br />
+$(document).ready(function(){<br />
+&nbsp; &nbsp; $(document).bind(&quot;contextmenu&quot;,function(e){<br />
+&nbsp; &nbsp; &nbsp; &nbsp; return false;<br />
+&nbsp; &nbsp; });<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">2. 隐藏搜索文本框文字<br />
+Hide when clicked in the search field, the value.(example can be found below in the comment fields)<br />
+$(document).ready(function() {<br />
+$(&quot;input.text1&quot;).val(&quot;Enter your search text here&quot;);<br />
+&nbsp; &nbsp;textFill($(&#39;input.text1&#39;));<br />
+});<br />
+&nbsp; &nbsp; function textFill(input){ //input focus text function<br />
+&nbsp; &nbsp; &nbsp;var originalvalue = input.val();<br />
+&nbsp; &nbsp; &nbsp;input.focus( function(){<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if( $.trim(input.val()) == originalvalue ){ input.val(&#39;&#39;); }<br />
+&nbsp; &nbsp; &nbsp;});<br />
+&nbsp; &nbsp; &nbsp;input.blur( function(){<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if( $.trim(input.val()) == &#39;&#39; ){ input.val(originalvalue); }<br />
+&nbsp; &nbsp; &nbsp;});<br />
+}</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">3. 在新窗口中打开链接<br />
+XHTML 1.0 Strict doesn&rsquo;t allow this attribute in the code, so use this to keep the code valid.<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;//Example 1: Every link will open in a new window<br />
+&nbsp; &nbsp;$(&#39;a[href^=&quot;http://&quot;]&#39;).attr(&quot;target&quot;, &quot;_blank&quot;);<br />
+&nbsp; &nbsp;//Example 2: Links with the rel=&quot;external&quot; attribute will only open in a new window<br />
+&nbsp; &nbsp;$(&#39;a[@rel$=&#39;external&#39;]&#39;).click(function(){<br />
+&nbsp; &nbsp; &nbsp; this.target = &quot;_blank&quot;;<br />
+&nbsp; &nbsp;});<br />
+});<br />
+// how to use<br />
+&lt;a href=&quot;http://www.opensourcehunter.com&quot; rel=external&gt;open link&lt;/a&gt;</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">4. 检测浏览器<br />
+注: 在版本jQuery 1.4中，$.support 替换掉了$.browser 变量<br />
+$(document).ready(function() {<br />
+// Target Firefox 2 and above<br />
+if ($.browser.mozilla &amp;&amp; $.browser.version &gt;= &quot;1.8&quot; ){<br />
+&nbsp; &nbsp; // do something<br />
+}<br />
+// Target Safari<br />
+if( $.browser.safari ){<br />
+&nbsp; &nbsp; // do something<br />
+}<br />
+// Target Chrome<br />
+if( $.browser.chrome){<br />
+&nbsp; &nbsp; // do something<br />
+}<br />
+// Target Camino<br />
+if( $.browser.camino){<br />
+&nbsp; &nbsp; // do something<br />
+}<br />
+// Target Opera<br />
+if( $.browser.opera){<br />
+&nbsp; &nbsp; // do something<br />
+}<br />
+// Target IE6 and below<br />
+if ($.browser.msie &amp;&amp; $.browser.version &lt;= 6 ){<br />
+&nbsp; &nbsp; // do something<br />
+}<br />
+// Target anything above IE6<br />
+if ($.browser.msie &amp;&amp; $.browser.version &gt; 6){<br />
+&nbsp; &nbsp; // do something<br />
+}<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">5. 预加载图片<br />
+This piece of code will prevent the loading of all images, which can be useful if you have a site with lots of images.<br />
+$(document).ready(function() {<br />
+jQuery.preloadImages = function()<br />
+{<br />
+&nbsp; for(var i = 0; i&lt;ARGUMENTS.LENGTH; jQuery(?&lt;img { i++)&gt;&quot;).attr(&quot;src&quot;, arguments);<br />
+&nbsp; }<br />
+}<br />
+// how to use<br />
+$.preloadImages(&quot;image1.jpg&quot;);<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">6. 页面样式切换<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp; $(&quot;a.Styleswitcher&quot;).click(function() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; //swicth the LINK REL attribute with the value in A REL attribute<br />
+&nbsp; &nbsp; &nbsp; &nbsp; $(&#39;link[rel=stylesheet]&#39;).attr(&#39;href&#39; , $(this).attr(&#39;rel&#39;));<br />
+&nbsp; &nbsp; });<br />
+// how to use<br />
+// place this in your header<br />
+&lt;LINK rel=stylesheet type=text/css href=&quot;default.css&quot;&gt;<br />
+// the links<br />
+&lt;A href=&quot;#&quot; rel=default.css&gt;Default Theme&lt;/A&gt;<br />
+&lt;A href=&quot;#&quot; rel=red.css&gt;Red Theme&lt;/A&gt;<br />
+&lt;A href=&quot;#&quot; rel=blue.css&gt;Blue Theme&lt;/A&gt;<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">7. 列高度相同<br />
+如果使用了两个CSS列，使用此种方式可以是两列的高度相同。<br />
+$(document).ready(function() {<br />
+function equalHeight(group) {<br />
+&nbsp; &nbsp; tallest = 0;<br />
+&nbsp; &nbsp; group.each(function() {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; thisHeight = $(this).height();<br />
+&nbsp; &nbsp; &nbsp; &nbsp; if(thisHeight &gt; tallest) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tallest = thisHeight;<br />
+&nbsp; &nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp; });<br />
+&nbsp; &nbsp; group.height(tallest);<br />
+}<br />
+// how to use<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp; equalHeight($(&quot;.left&quot;));<br />
+&nbsp; &nbsp; equalHeight($(&quot;.right&quot;));<br />
+});<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">8. 动态控制页面字体大小<br />
+用户可以改变页面字体大小<br />
+$(document).ready(function() {<br />
+&nbsp; // Reset the font size(back to default)<br />
+&nbsp; var originalFontSize = $(&#39;html&#39;).css(&#39;font-size&#39;);<br />
+&nbsp; &nbsp; $(&quot;.resetFont&quot;).click(function(){<br />
+&nbsp; &nbsp; $(&#39;html&#39;).css(&#39;font-size&#39;, originalFontSize);<br />
+&nbsp; });<br />
+&nbsp; // Increase the font size(bigger font0<br />
+&nbsp; $(&quot;.increaseFont&quot;).click(function(){<br />
+&nbsp; &nbsp; var currentFontSize = $(&#39;html&#39;).css(&#39;font-size&#39;);<br />
+&nbsp; &nbsp; var currentFontSizeNum = parseFloat(currentFontSize, 10);<br />
+&nbsp; &nbsp; var newFontSize = currentFontSizeNum*1.2;<br />
+&nbsp; &nbsp; $(&#39;html&#39;).css(&#39;font-size&#39;, newFontSize);<br />
+&nbsp; &nbsp; return false;<br />
+&nbsp; });<br />
+&nbsp; // Decrease the font size(smaller font)<br />
+&nbsp; $(&quot;.decreaseFont&quot;).click(function(){<br />
+&nbsp; &nbsp; var currentFontSize = $(&#39;html&#39;).css(&#39;font-size&#39;);<br />
+&nbsp; &nbsp; var currentFontSizeNum = parseFloat(currentFontSize, 10);<br />
+&nbsp; &nbsp; var newFontSize = currentFontSizeNum*0.8;<br />
+&nbsp; &nbsp; $(&#39;html&#39;).css(&#39;font-size&#39;, newFontSize);<br />
+&nbsp; &nbsp; return false;<br />
+&nbsp; });<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">9. 返回页面顶部功能<br />
+For a smooth(animated) ride back to the top(or any location).<br />
+$(document).ready(function() {<br />
+$(&#39;a[href*=#]&#39;).click(function() {<br />
+if (location.pathname.replace(/^\//,&#39;&#39;) == this.pathname.replace(/^\//,&#39;&#39;)<br />
+&amp;&amp; location.hostname == this.hostname) {<br />
+&nbsp; &nbsp;var $target = $(this.hash);<br />
+&nbsp; &nbsp;$target = $target.length &amp;&amp; $target<br />
+&nbsp; &nbsp;|| $(&#39;[name=&#39; + this.hash.slice(1) +&#39;]&#39;);<br />
+&nbsp; &nbsp;if ($target.length) {<br />
+&nbsp; var targetOffset = $target.offset().top;<br />
+&nbsp; $(&#39;html,body&#39;)<br />
+&nbsp; .animate({scrollTop: targetOffset}, 900);<br />
+&nbsp; &nbsp; return false;<br />
+&nbsp; &nbsp;}<br />
+&nbsp; }<br />
+&nbsp; });<br />
+// how to use<br />
+// place this where you want to scroll to<br />
+&lt;A name=top&gt;&lt;/A&gt;<br />
+// the link<br />
+&lt;A href=&quot;#top&quot;&gt;go to top&lt;/A&gt;<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">10. 获得鼠标指针XY值<br />
+Want to know where your mouse cursor is?<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;$().mousemove(function(e){<br />
+&nbsp; &nbsp; &nbsp;//display the x and y axis values inside the div with the id XY<br />
+&nbsp; &nbsp; $(&#39;#XY&#39;).html(&quot;X Axis : &quot; + e.pageX + &quot; | Y Axis &quot; + e.pageY);<br />
+&nbsp; });<br />
+// how to use<br />
+&lt;DIV id=XY&gt;&lt;/DIV&gt;<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">11.返回顶部按钮<br />
+你可以利用 animate 和 scrollTop 来实现返回顶部的动画，而不需要使用其他插件。<br />
+// Back to top<br />
+$(&#39;a.top&#39;).click(function () {<br />
+&nbsp; $(document.body).animate({scrollTop: 0}, 800);<br />
+&nbsp; return false;<br />
+});<br />
+&lt;!-- Create an anchor tag --&gt;<br />
+&lt;a href=&quot;#&quot;&gt;Back to top&lt;/a&gt;<br />
+改变 scrollTop 的值可以调整返回距离顶部的距离，而 animate 的第二个参数是执行返回动作需要的时间(单位：毫秒)。</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">12.预加载图片<br />
+如果你的页面中使用了很多不可见的图片（如：hover 显示），你可能需要预加载它们：<br />
+$.preloadImages = function () {<br />
+&nbsp; for (var i = 0; i &lt; arguments.length; i++) {<br />
+&nbsp; &nbsp; $(&#39;&lt;img&gt;&#39;).attr(&#39;src&#39;, arguments);<br />
+&nbsp; }<br />
+};<br />
+$.preloadImages(&#39;img/hover1.png&#39;, &#39;img/hover2.png&#39;);</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">13.检查图片是否加载完成<br />
+有时候你需要确保图片完成加载完成以便执行后面的操作：<br />
+$(&#39;img&#39;).load(function () {<br />
+&nbsp; console.log(&#39;image load successful&#39;);<br />
+});<br />
+你可以把 img 替换为其他的 ID 或者 class 来检查指定图片是否加载完成。</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">14.自动修改破损图像<br />
+如果你碰巧在你的网站上发现了破碎的图像链接，你可以用一个不易被替换的图像来代替它们。添加这个简单的代码可以节省很多麻烦：<br />
+$(&#39;img&#39;).on(&#39;error&#39;, function () {<br />
+&nbsp; $(this).prop(&#39;src&#39;, &#39;img/broken.png&#39;);<br />
+});<br />
+即使你的网站没有破碎的图像链接，添加这段代码也没有任何害处。</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">15.鼠标悬停(hover)切换 class 属性<br />
+假如当用户鼠标悬停在一个可点击的元素上时，你希望改变其效果，下面这段代码可以在其悬停在元素上时添加 class 属性，当用户鼠标离开时，则自动取消该 class 属性：<br />
+$(&#39;.btn&#39;).hover(function () {<br />
+&nbsp; $(this).addClass(&#39;hover&#39;);<br />
+&nbsp; }, function () {<br />
+&nbsp; &nbsp; $(this).removeClass(&#39;hover&#39;);<br />
+&nbsp; });<br />
+你只需要添加必要的CSS代码即可。如果你想要更简洁的代码，可以使用 toggleClass 方法：<br />
+$(&#39;.btn&#39;).hover(function () {&nbsp;<br />
+&nbsp; $(this).toggleClass(&#39;hover&#39;);&nbsp;<br />
+});<br />
+注：直接使用CSS实现该效果可能是更好的解决方案，但你仍然有必要知道该方法。</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">16.禁用 input 字段<br />
+有时你可能需要禁用表单的 submit 按钮或者某个 input 字段，直到用户执行了某些操作（例如，检查&ldquo;已阅读条款&rdquo;复选框）。可以添加 disabled 属性，直到你想启用它时：<br />
+$(&#39;input[type=&quot;submit&quot;]&#39;).prop(&#39;disabled&#39;, true);<br />
+你要做的就是执行 removeAttr 方法，并把要移除的属性作为参数传入：<br />
+$(&#39;input[type=&quot;submit&quot;]&#39;).removeAttr(&#39;disabled&#39;);</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">17.阻止链接加载<br />
+有时你不希望链接到某个页面或者重新加载它，你可能希望它来做一些其他事情或者触发一些其他脚本，你可以这么做：<br />
+$(&#39;a.no-link&#39;).click(function (e) {<br />
+&nbsp; e.preventDefault();<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">18.切换 fade/slide<br />
+fade 和 slide 是我们在 jQuery 中经常使用的动画效果，它们可以使元素显示效果更好。但是如果你希望元素显示时使用第一种效果，而消失时使用第二种效果，则可以这么做：<br />
+// Fade<br />
+$(&#39;.btn&#39;).click(function () {<br />
+&nbsp; $(&#39;.element&#39;).fadeToggle(&#39;slow&#39;);<br />
+});<br />
+// Toggle<br />
+$(&#39;.btn&#39;).click(function () {<br />
+&nbsp; $(&#39;.element&#39;).slideToggle(&#39;slow&#39;);<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">19.简单的手风琴效果<br />
+这是一个实现手风琴效果快速简单的方法：<br />
+// Close all panels<br />
+$(&#39;#accordion&#39;).find(&#39;.content&#39;).hide();<br />
+// Accordion<br />
+$(&#39;#accordion&#39;).find(&#39;.accordion-header&#39;).click(function () {<br />
+&nbsp; var next = $(this).next();<br />
+&nbsp; next.slideToggle(&#39;fast&#39;);<br />
+&nbsp; $(&#39;.content&#39;).not(next).slideUp(&#39;fast&#39;);<br />
+&nbsp; return false;<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">20.让两个 DIV 高度相同<br />
+有时你需要让两个 div 高度相同，而不管它们里面的内容多少。可以使用下面的代码片段：<br />
+var $columns = $(&#39;.column&#39;);<br />
+var height = 0;<br />
+$columns.each(function () {<br />
+&nbsp; if ($(this).height() &gt; height) {<br />
+&nbsp; &nbsp; height = $(this).height();<br />
+&nbsp; }<br />
+});<br />
+$columns.height(height);<br />
+这段代码会循环一组元素，并设置它们的高度为元素中的最大高。</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">21. 验证元素是否为空<br />
+This will allow you to check if an element is empty.<br />
+$(document).ready(function() {<br />
+&nbsp; if ($(&#39;#id&#39;).html()) {<br />
+&nbsp; &nbsp;// do something<br />
+&nbsp; &nbsp;}<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">22. 替换元素<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;$(&#39;#id&#39;).replaceWith(&#39;<br />
+&lt;DIV&gt;I have been replaced&lt;/DIV&gt;<br />
+&#39;);<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">23. jQuery延时加载功能<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;window.setTimeout(function() {<br />
+&nbsp; &nbsp; &nbsp;// do something<br />
+&nbsp; &nbsp;}, 1000);<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">24. 移除单词功能<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;var el = $(&#39;#id&#39;);<br />
+&nbsp; &nbsp;el.html(el.html().replace(/word/ig, &quot;&quot;));<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">25. 验证元素是否存在于jquery对象集合中<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;if ($(&#39;#id&#39;).length) {<br />
+&nbsp; // do something<br />
+&nbsp; }<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">26. 使整个DIV可点击<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp; $(&quot;div&quot;).click(function(){<br />
+&nbsp; &nbsp; &nbsp; //get the url from href attribute and launch the url<br />
+&nbsp; &nbsp; &nbsp; window.location=$(this).find(&quot;a&quot;).attr(&quot;href&quot;); return false;<br />
+&nbsp; &nbsp; });<br />
+// how to use<br />
+&lt;DIV&gt;&lt;A href=&quot;index.html&quot;&gt;home&lt;/A&gt;&lt;/DIV&gt;</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">27. ID与Class之间转换<br />
+当改变Window大小时，在ID与Class之间切换<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;function checkWindowSize() {<br />
+&nbsp; &nbsp; if ( $(window).width() &gt; 1200 ) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; $(&#39;body&#39;).addClass(&#39;large&#39;);<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp; else {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; $(&#39;body&#39;).removeClass(&#39;large&#39;);<br />
+&nbsp; &nbsp; }<br />
+&nbsp; &nbsp;}<br />
+$(window).resize(checkWindowSize);<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">28. 克隆对象<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;var cloned = $(&#39;#id&#39;).clone();<br />
+// how to use<br />
+&lt;DIV id=id&gt;&lt;/DIV&gt;</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">29. 使元素居屏幕中间位置<br />
+$(document).ready(function() {<br />
+&nbsp; jQuery.fn.center = function () {<br />
+&nbsp; &nbsp; &nbsp; this.css(&quot;position&quot;,&quot;absolute&quot;);<br />
+&nbsp; &nbsp; &nbsp; this.css(&quot;top&quot;, ( $(window).height() - this.height() ) / 2+$(window).scrollTop() + &quot;px&quot;);<br />
+&nbsp; &nbsp; &nbsp; this.css(&quot;left&quot;, ( $(window).width() - this.width() ) / 2+$(window).scrollLeft() + &quot;px&quot;);<br />
+&nbsp; &nbsp; &nbsp; return this;<br />
+&nbsp; }<br />
+&nbsp; $(&quot;#id&quot;).center();<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">30. 写自己的选择器<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;$.extend($.expr[&#39;:&#39;], {<br />
+&nbsp; &nbsp; &nbsp; &nbsp;moreThen1000px: function(a) {<br />
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return $(a).width() &gt; 1000;<br />
+&nbsp; &nbsp; &nbsp; }<br />
+&nbsp; &nbsp;});<br />
+&nbsp; $(&#39;.box:moreThen1000px&#39;).click(function() {<br />
+&nbsp; &nbsp; &nbsp; // creating a simple js alert box<br />
+&nbsp; &nbsp; &nbsp; alert(&#39;The element that you have clicked is over 1000 pixels wide&#39;);<br />
+&nbsp; });<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">31. 统计元素个数<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;$(&quot;p&quot;).size();<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">32. 使用自己的 Bullets<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;$(&quot;ul&quot;).addClass(&quot;Replaced&quot;);<br />
+&nbsp; &nbsp;$(&quot;ul &gt; li&quot;).prepend(&quot;? &quot;);<br />
+// how to use<br />
+ul.Replaced { list-style : none; }<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">33. 引用Google主机上的Jquery类库（谷歌用不了，可以用百度CDN）<br />
+//Example 1<br />
+&lt;SCRIPT src=&quot;http://www.google.com/jsapi&quot;&gt;&lt;/SCRIPT&gt;<br />
+&lt;SCRIPT type=text/javascript&gt;<br />
+google.load(&quot;jquery&quot;, &quot;1.2.6&quot;);<br />
+google.setOnLoadCallback(function() {<br />
+&nbsp; &nbsp; // do something<br />
+});<br />
+&lt;/SCRIPT&gt;&lt;SCRIPT type=text/javascript src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&quot;&gt;&lt;/SCRIPT&gt;<br />
+// Example 2the best and fastest way)<br />
+&lt;SCRIPT type=text/javascript src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js&quot;&gt;&lt;/SCRIPT&gt;</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">34. 禁用Jquery（动画）效果<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp; jQuery.fx.off = true;<br />
+});</span></span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">35. 与其他Javascript类库冲突解决方案<br />
+$(document).ready(function() {<br />
+&nbsp; &nbsp;var $jq = jQuery.noConflict();<br />
+&nbsp; &nbsp;$jq(&#39;#id&#39;).show();<br />
+});</span></span></p>
+
+</body>
+</html>

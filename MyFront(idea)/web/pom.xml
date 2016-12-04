@@ -54,5 +54,12 @@
                 <activeByDefault>true</activeByDefault>
             </activation>
         </profile>
+        <profile>
+            <id>top</id>
+            <properties>
+                <runtime.env>packageConfig\product</runtime.env>
+                <final.name>www.shirp.top</final.name>
+            </properties>
+        </profile>
     </profiles>
 </project>

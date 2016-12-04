@@ -51,16 +51,19 @@
     <div id="show-itle" class="col-md-9 col-sm-9 col-xs-9 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 content-bd">
         <div>
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <a href="#" target="_blank"><strong class="content-title content-color">[2016/04/20]我热爱学习</strong></a>
+                <a href="../text/text1.html" target="_blank"><strong class="content-title content-color">[2016/11/22]jquery35个小技巧</strong></a>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <a href="#" target="_blank"><strong class="content-title content-color">[2016/04/20]我热爱学习</strong></a>
+                <a href="../text/text2.html" target="_blank"><strong class="content-title content-color">[2016/11/10]使用maven网站打war包与部署</strong></a>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <a href="#" target="_blank"><strong class="content-title content-color">[2016/04/20]我热爱学习</strong></a>
+                <a href="../text/text4.html" target="_blank"><strong class="content-title content-color">[2016/10/31]webview相关</strong></a>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <a href="#" target="_blank"><strong class="content-title content-color">[2016/04/20]我热爱学习</strong></a>
+                <a href="../text/text5.html" target="_blank"><strong class="content-title content-color">[2016/10/31]js正则表达式</strong></a>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <a href="../text/text6.html" target="_blank"><strong class="content-title content-color">[2016/10/29]排序</strong></a>
             </div>
         </div>
         <div id="pagination" class="col-lg-offset-6 col-md-offset-6 col-sm-offset-4 col-xs-offset-4">

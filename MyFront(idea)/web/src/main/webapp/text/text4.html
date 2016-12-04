@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>webview相关</title>
+</head>
+<body>
+<p style="text-align: center;font-size: 25px">webview相关</p>
+<p style="margin-left: 240px;"><span style="font-size:16px">1、其中的webView的一系列用法,比如 webView.getSettings().setJavaScriptEnabled(true);设置可以使用javscript;&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">2、在WebView的设计中，不是什么事都要WebView类干的，有些杂事是分给其他人的，这样WebView专心干好自己的解析、渲染工作就行了。WebViewClient就是帮助WebView处理各种通知、请求事件的，具体来说包括：<br />
+onLoadResource&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onPageStart&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onPageFinish&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onReceiveError&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onReceivedHttpAuthRequest&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">3、WebChromeClient是辅助WebView处理Javascript的对话框，网站图标，网站title，加载进度等 :<br />
+onCloseWindow(关闭WebView)&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onCreateWindow()&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onJsAlert (WebView上alert是弹不出来东西的，需要定制你的WebChromeClient处理弹出)&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onJsPrompt&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onJsConfirm&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onProgressChanged&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onReceivedIcon&nbsp;</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">onReceivedTitle</span></p>
+
+<p style="margin-left: 240px;"><span style="font-size:16px">4、更多的时候，你可以这样<br />
+WebView webView; &nbsp;<br />
+webView= (WebView) findViewById(R.id.webview);&nbsp;<br />
+webView.setWebChromeClient(new WebChromeClient()); &nbsp;<br />
+webView.setWebViewClient(new WebViewClient()); &nbsp;<br />
+webView.getSettings().<br />
+setJavaScriptEnabled(true);&nbsp;<br />
+webView.loadUrl(url); &nbsp;</span></p>
+</body>
+</html>

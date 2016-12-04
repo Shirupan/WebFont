@@ -89,3 +89,13 @@ a{
     line-height: 1.8;
     padding-bottom: 50px;
 }
+
+.move-top{
+    position: fixed;
+    display: block;
+    bottom: 86px;
+    right: 300px;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 15px;
+}

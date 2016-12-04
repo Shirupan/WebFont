@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用maven网站打war包与部署</title>
+</head>
+<body>
+<pre>
+<p style="text-align: center;font-size: 25px">使用maven网站打war包与部署</p>
+<p style="margin-left: 320px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">用maven将项目打成war包<br />
+cmd到项目根目录<br />
+&quot;mvn clean package&quot;命令打默认包<br />
+&quot;mvn clean install&quot;如果引入了其他项目，先将其打包<br />
+&quot;mvn clean -Pxxx package&quot;命令根据pom.xml文件中配置id打不同配置的</span></span></p>
+
+<p style="margin-left: 320px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">pom.xml文件<br />
+&lt;finalName&gt;${final.name}&lt;/finalName&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;sourceDirectory&gt;src&lt;/sourceDirectory&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;resources&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;resource&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;directory&gt;src/main&lt;/directory&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;excludes&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;exclude&gt;**/*.java&lt;/exclude&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/excludes&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/resource&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/resources&gt;<br />
+&lt;profiles&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;profile&gt;&nbsp;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;id&gt;product&lt;/id&gt;&nbsp;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;properties&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;runtime.env&gt;src\packageConfig\product&lt;/runtime.env&gt; //根据&quot;项目/src/packageConfig/product&quot;文件夹下的config.properties等配置文件打包<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;final.name&gt;xxx&lt;/final.name&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/properties&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;activation&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;activeByDefault&gt;true&lt;/activeByDefault&gt;&nbsp;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/activation&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/profile&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;profile&gt;&nbsp;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;id&gt;test&lt;/id&gt;&nbsp;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;properties&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;runtime.env&gt;src\packageConfig\test&lt;/runtime.env&gt; &nbsp;//根据&quot;项目/src/packageConfig/test&quot;文件夹下的config.properties等配置文件打包<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;final.name&gt;xxx-test&lt;/final.name&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/properties&gt;<br />
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&lt;/profile&gt;<br />
+&nbsp;&nbsp; &nbsp;&lt;/profiles&gt;</span></span></p>
+
+<p style="margin-left: 320px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">如果打包过程提示缺失文件可到mvn库搜索&quot;http://search.maven.org/#search&quot;<br />
+导包方法：<br />
+右键工程-》Maven-》add Dependency-》在enter...下搜索</span></span></p>
+
+<p style="margin-left: 320px;"><span style="font-size:16px"><span style="font-family:microsoft yahei">打成war包放于该目录&quot;apache-tomcat\webapps&quot;下<br />
+可根据&quot;http://localhost:8080/war包文件名/..&quot;访问该网站</span></span><br />
+&nbsp;</p>
+</body>
+</html>

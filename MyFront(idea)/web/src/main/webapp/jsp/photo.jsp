@@ -23,7 +23,15 @@
 <body class="bs-docs-home">
 <header class="navbar navbar-static-top bs-docs-nav color-main-bg">
     <jsp:include page="/include/top.jsp"></jsp:include>
+    <div class="jumbotron banner">
+        <div class="container">
+            <h1>Photos</h1>
+            <h2>这里有大量美图。</h2>
+        </div>
+    </div>
+    <jsp:include page="/include/banner-info.jsp"></jsp:include>
 </header>
+
 <div class="container main-content">
     <!--gallery:start-->
     <div class="col-md-12 unit">
@@ -35,67 +43,59 @@
                 <section>
                     <ul id="da-thumbs" class="da-thumbs">
                         <li><a href="<%=request.getContextPath()%>/images/g-1.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-1.jpg" alt=""/>
+                                src="<%=request.getContextPath()%>/images/g-1.jpg" alt="你的名字"/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>你的名字</h5>
+                                <%--<span>non suscipit leo fringilla non suscipit leo--%>
+									<%--fringilla molestie</span>--%>
                             </div>
                         </a></li>
                         <li><a href="<%=request.getContextPath()%>/images/g-2.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-2.jpg" alt=""/>
+                                src="<%=request.getContextPath()%>/images/g-2.jpg" alt="你的名字"/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>你的名字</h5>
                             </div>
                         </a></li>
                         <li><a href="<%=request.getContextPath()%>/images/g-3.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-3.jpg" alt=""/>
+                                src="<%=request.getContextPath()%>/images/g-3.jpg" alt="你的名字"/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>你的名字</h5>
                             </div>
                         </a></li>
                         <li><a href="<%=request.getContextPath()%>/images/g-4.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-4.jpg" alt=""/>
+                                src="<%=request.getContextPath()%>/images/g-4.jpg" alt="你的名字"/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>你的名字</h5>
                             </div>
                         </a></li>
                         <li><a href="<%=request.getContextPath()%>/images/g-5.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-5.jpg" alt=""/>
+                                src="<%=request.getContextPath()%>/images/g-5.jpg" alt="黄子韬"/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>黄子韬</h5>
                             </div>
                         </a></li>
                         <li><a href="<%=request.getContextPath()%>/images/g-6.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-6.jpg" alt=""/>
+                                src="<%=request.getContextPath()%>/images/g-6.jpg" alt="孟庭苇"/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>孟庭苇</h5>
                             </div>
                         </a></li>
                         <li><a href="<%=request.getContextPath()%>/images/g-7.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-7.jpg" alt=""/>
+                                src="<%=request.getContextPath()%>/images/g-7.jpg" alt="景色"/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>景色</h5>
                             </div>
                         </a></li>
                         <li><a href="<%=request.getContextPath()%>/images/g-8.jpg" rel="show"> <img
-                                src="<%=request.getContextPath()%>/images/g-8.jpg" alt=""/>
+                                src="<%=request.getContextPath()%>/images/g-8.jpg" alt="景色"/>
                             <div>
-                                <h5>Car</h5>
-                                <span>non suscipit leo fringilla non suscipit leo
-									fringilla molestie</span>
+                                <h5>景色</h5>
+                            </div>
+                        </a></li>
+                        <li><a href="<%=request.getContextPath()%>/images/g-9.jpg" rel="show"> <img
+                                src="<%=request.getContextPath()%>/images/g-9.jpg" alt="景色"/>
+                            <div>
+                                <h5>景色</h5>
                             </div>
                         </a></li>
                         <div class="clearfix"></div>

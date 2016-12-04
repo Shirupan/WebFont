@@ -63,7 +63,7 @@
     <nav id="bs-navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav navbar-right">
             <li <%="home".equals(menu) ? " class=\"active\"" : ""%>><a
-                    href="<%=request.getContextPath()%>/jsp/index.jsp"><span class="nav-chinese"><%=Constant.NAV_HOME%></span><br> </a></li>
+                    href="<%=request.getContextPath()%>/index.jsp"><span class="nav-chinese"><%=Constant.NAV_HOME%></span><br> </a></li>
             <li <%="note".equals(menu) ? " class=\"active\"" : ""%>><a
                     href="<%=request.getContextPath()%>/jsp/note.jsp"><span class="nav-chinese"><%=Constant.NAV_NOTE%></span><br> </a></li>
             <li <%="photo".equals(menu) ? " class=\"active\"" : ""%>><a
